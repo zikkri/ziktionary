@@ -1,12 +1,18 @@
-<div class="container d-flex justify-content-center align-items-center mt-5">
+<div class="container text-center">
+  <h1>ziktionary</h1>
+  <h5>enter a word to search</h5>
+</div>
+<div class="container d-flex justify-content-center align-items-center mt-3">
   <div class="row">
     <form #form="ngForm" (ngSubmit)="getDefinition(form.value)">
       <input type="text" ngModel name="word" />
-      <button class="btn btn-primary mx-2" type="submit">Search</button>
+      <button class="btn my-1" type="submit">
+        <fa-icon [icon]="magnifyingGlass"></fa-icon>
+      </button>
     </form>
   </div>
 </div>
-<div class="container">
+<div class="container mt-2">
   <div *ngIf="found" class="row">
     <div class="card shadow">
       <!-- THIS ISNT WORKING YET NEED TO FIGURE THIS OUT STILL -- NOT SOURCING THE RIGHT STUFF ITS LOOPING THE WRONG SHIT -->

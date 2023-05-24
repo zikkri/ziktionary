@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="row">
+    <form #form="ngForm" (ngSubmit)="getDefinition(form.value)">
+      <input type="text" ngModel name="word" />
+      <button class="btn btn-primary mx-2" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <div *ngIf="found" class="row">
+    <div class="card shadow">
+      <h1>{{ data[0].word }}</h1>
+    </div>
+  </div>
+</div>

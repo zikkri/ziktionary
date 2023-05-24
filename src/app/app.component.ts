@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   getDefinition(val: any) {
     const searchedWord = Object.values(val);
     this.data = this.dicService.getDefintion(searchedWord).subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       this.data = data;
       this.found = true;
       // console.log(this.data);

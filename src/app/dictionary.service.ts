@@ -14,7 +14,7 @@ export class DictionaryService {
   getDefintion(val: any) {
     return this.http.get<any>(`${API_URL}/${val}`).pipe(
       map((res) => {
-        console.log(res);
+        // console.log(res);
         return res;
       })
     );

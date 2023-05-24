@@ -9,7 +9,13 @@
 <div class="container">
   <div *ngIf="found" class="row">
     <div class="card shadow">
-      <h1>{{ data[0].word }}</h1>
+      <!-- THIS ISNT WORKING YET NEED TO FIGURE THIS OUT STILL -- NOT SOURCING THE RIGHT STUFF ITS LOOPING THE WRONG SHIT -->
+      <h1>{{ data[0].word }} - [{{ data[0].phonetics[1].text }}]</h1>
+      <div *ngFor="let item of data[0].meanings" class="row">
+        <h1>{{ item.partOfSpeech }}</h1>
+        <h1>{{ item.definitions.definition }}</h1>
+        <h1>{{ item.definitions.example }}</h1>
+      </div>
     </div>
   </div>
 </div>

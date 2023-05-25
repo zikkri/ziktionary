@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DictionaryService } from './dictionary.service';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ export class AppComponent implements OnInit {
   title = 'ziktionary';
   data: any;
   found: Boolean = false;
+  magnifyingGlass = faMagnifyingGlass;
 
   constructor(private dicService: DictionaryService) {}
 
@@ -21,7 +23,7 @@ export class AppComponent implements OnInit {
       // console.log(data);
       this.data = data;
       this.found = true;
-      // console.log(this.data);
+      console.log(this.data);
     });
     // console.log(this.data);
   }

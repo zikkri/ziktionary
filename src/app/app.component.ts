@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
       // console.log(data);
       this.data = data;
       this.found = true;
-      // console.log(this.data);
+      console.log(this.data);
     });
     // console.log(this.data);
   }

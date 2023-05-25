@@ -2,7 +2,9 @@
   <h1>ziktionary</h1>
   <h5>enter a word to search</h5>
 </div>
-<div class="container d-flex justify-content-center align-items-center mt-3">
+<div
+  class="container d-flex justify-content-center align-items-center mt-3 mb-5"
+>
   <div class="row">
     <form #form="ngForm" (ngSubmit)="getDefinition(form.value)">
       <input type="text" ngModel name="word" />
@@ -14,13 +16,12 @@
 </div>
 <div class="container mt-2">
   <div *ngIf="found" class="row">
-    <div class="card shadow">
-      <!-- THIS ISNT WORKING YET NEED TO FIGURE THIS OUT STILL -- NOT SOURCING THE RIGHT STUFF ITS LOOPING THE WRONG SHIT -->
-      <h1>{{ data[0].word }} - [{{ data[0].phonetics[1].text }}]</h1>
-      <div *ngFor="let item of data[0].meanings" class="row">
-        <h1>{{ item.partOfSpeech }}</h1>
-        <h1>{{ item.definitions.definition }}</h1>
-        <h1>{{ item.definitions.example }}</h1>
+    <div *ngFor="let stuff of data; let i = index" class="card shadow my-3">
+      <h1>{{ data[i].word }}</h1>
+      <div *ngFor="let item of data[i].meanings" class="row">
+        <h3>{{ item.partOfSpeech }}</h3>
+        <h5>{{ item.definitions[0].definition }}</h5>
+        <h5>{{ item.definitions.example }}</h5>
       </div>
     </div>
   </div>

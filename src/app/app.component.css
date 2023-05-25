@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,600;1,200&display=swap");
+
+* {
+  font-family: "Kanit", sans-serif;
+}
+
+.headers {
+  font-weight: 800;
+}
+
+.minor {
+  font-weight: 400;
+}
+
+.words {
+  font-weight: 300;
+}
+
+.types {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.def {
+  font-weight: 100;
+}

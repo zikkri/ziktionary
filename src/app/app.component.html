@@ -23,7 +23,7 @@
       *ngFor="let stuff of data; let i = index"
       class="card shadow my-3 p-2 w-75"
     >
-      <h1 class="headers">{{ data[i].word }}</h1>
+      <h1 class="headers">{{i+1}}) {{ data[i].word | titlecase}}</h1>
       <div *ngFor="let item of data[i].meanings" class="row">
         <h3 class="types">{{ item.partOfSpeech }}</h3>
         <h5 class="def">{{ item.definitions[0].definition }}</h5>

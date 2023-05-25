@@ -24,3 +24,20 @@
 .def {
   font-weight: 100;
 }
+
+.input {
+  outline: none;
+  text-align: center;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: white;
+}
+
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: black;
+}

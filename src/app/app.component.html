@@ -7,7 +7,7 @@
 >
   <div class="row">
     <form #form="ngForm" (ngSubmit)="getDefinition(form.value)">
-      <input type="text" ngModel name="word" />
+      <input type="text" ngModel name="word" class="input"/>
       <button class="btn my-1" type="submit">
         <fa-icon [icon]="magnifyingGlass"></fa-icon>
       </button>
